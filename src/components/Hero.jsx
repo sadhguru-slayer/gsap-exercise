@@ -67,7 +67,8 @@ export default function Hero() {
   return (
     <section
       ref={container}
-      className="h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 text-white text-center"
+      // className="h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 text-white text-center"
+      className="h-screen flex flex-col items-center justify-center text-white text-center"
     >
       <h1 className="fade text-6xl font-bold mb-4">Hey, I'm Sadguru 👋</h1>
       <p className="fade text-xl max-w-xl">

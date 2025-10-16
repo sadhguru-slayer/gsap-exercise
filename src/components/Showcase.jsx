@@ -75,7 +75,8 @@ export default function Showcase() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen bg-slate-950 text-white overflow-hidden"
+      className="relative min-h-screen text-white overflow-hidden"
+      // className="relative min-h-screen bg-slate-950 text-white overflow-hidden"
     >
       <h2 className="text-center text-5xl font-bold pt-20 pb-10">
         Featured Projects

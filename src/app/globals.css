@@ -2,7 +2,6 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
 }
 #__next {
   height: 100%; /* Ensure the Next.js container takes full height */

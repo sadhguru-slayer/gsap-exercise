@@ -42,7 +42,8 @@ export default function About() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 bg-black text-gray-900"
+      // className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 bg-black text-gray-900"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16"
     >
       <div ref={textRef} className="md:w-1/2 mb-8 md:mb-0">
         <h2 className="text-4xl font-bold mb-4">About Me</h2>
