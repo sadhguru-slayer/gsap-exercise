@@ -29,6 +29,7 @@ const projects = [
 ];
 
 export default function Showcase() {
+  
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -42,28 +43,27 @@ export default function Showcase() {
           scrollTrigger: {
             trigger: card,
             start: "top 20%",
-            end: "bottom 30%",
+            end: "bottom 0%",
             scrub: 0.5,
             pin: true,
             pinSpacing: false,
-            // markers: true, // uncomment if you want to debug positions
           },
         });
 
-        // 👇 Card enters smoothly (1.1 → 1)
+        // 👇 Card enters smoothly (opacity remains at 1, scale goes from 1.1 → 1)
         tl.fromTo(
           card,
-          { scale: 1.1 },
-          { scale: 1, opacity: 1, ease: "power2.out", duration: 0.3 }
+          { scale: 1.1, opacity: 1 },  // Ensure opacity is 1 initially
+          { scale: 1, ease: "power2.out", duration: 0.3 }
         );
 
-        // 👇 Card exits smoothly (1 → 0.6)
+        // 👇 Card exits smoothly (scale goes from 1 → 0.9, opacity from 1 → 0)
         if (!isLast) {
           tl.to(card, {
-            scale: 0.6,
-            opacity: 0,
+            scale: 1,
+            opacity: 0,  // Fade out when exiting
             ease: "power2.inOut",
-            duration: 0.5,
+            duration: 0.3,
           });
         }
       });
@@ -87,7 +87,7 @@ export default function Showcase() {
             key={i}
             className="project-card w-[90%] md:w-[70%] mx-auto rounded-3xl overflow-hidden shadow-2xl mb-20"
           >
-            <div className="relative h-[80vh] flex flex-col items-center justify-center">
+            <div className="relative h-[80vh] bg-black flex flex-col items-center justify-center">
               <img
                 src={proj.img}
                 alt={proj.title}
